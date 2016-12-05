@@ -247,8 +247,8 @@
         #k< k_end
         j0c47 => "-:-:-:-:00 ISETP.GE.AND P2, PT, k, $k_end, P5;\n",
         j0c53 => "-:-:-:-:00 ISETP.GE.AND P3, PT, k, $k_end, P6;\n",
-        j0c62 => "-:G:D:-:00 \@P2 LD.E.CI.128 loadA0, [trackA];\n",
-        j0c63 => "-:G:D:-:00 \@P3 LD.E.CI.128 loadB0, [trackB];\n",
+        j0c62 => "-:G:D:-:00 \@P2 LDG.E.CI.128 loadA0, [trackA];\n",
+        j0c63 => "-:G:D:-:00 \@P3 LDG.E.CI.128 loadB0, [trackB];\n",
 
         j1c47 => "-:-:-:-:00 \@P2 IADD   trackA0.CC, trackA0, param_lda8;\n",
         j1c53 => "-:-:-:-:00 \@P3 IADD   trackB0.CC, trackB0, 4x<8>;\n",
@@ -259,7 +259,7 @@
         j3c47 => "-:-:-:-:00 ISETP.GE.AND P0, PT, k, $k_end, PT;\n",
         j3c53 => "-:-:-:-:00 IADD32I k, k, -8;\n",
 
-        #j5c47 => "T:-:D:S:00 TEXDEPBAR 0x0;\n", 
+        j5c47 => "T:-:D:S:00 TEXDEPBAR 0x0;\n", 
         j5c53 => "-:-:D:S:00 \@P0 STS.128 [writeAs + 4x<0*128>], loadA0;\n",
         j5c61 => "-:G:-:-:15 \@P0 STS [writeBs + 4x<0*128>], loadB0;\n",
         j5c62 => "-:G:-:-:15 \@P0 STS [writeBs + 4x<1*128>], loadB1;\n",
